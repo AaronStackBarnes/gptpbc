@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron App</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline';"
+    />
+    <style>
+      #progress-bar-container {
+        width: 100%;
+        height: 20px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+      #progress-bar {
+        width: 0%;
+        height: 100%;
+        background-color: #007aff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GPT-4 Chunk Prompter</h1>
+    <p>
+      Select a text file to divide into chunks of less than 4000 characters
+      each. Use the left and right arrow keys to navigate through the chunks.
+      Each chunk copied to the clipboard will include a prompt for the GPT-4
+      agent.
+    </p>
+    <input type="file" id="file-input" />
+    <div id="output"></div>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>

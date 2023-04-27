@@ -1,0 +1,29 @@
+{
+  "name": "gptpbc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.fullstack.gptpbc",
+    "productName": "ChatGPT Chunk Prompter",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^2.3.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0",
+    "electron": "^11.5.0"
+  }
+}
